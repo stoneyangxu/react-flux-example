@@ -22,6 +22,12 @@ const Actions = {
       type: TodoActionTypes.TOGGLE_TODO,
       id
     })
+  },
+
+  toggleAllTodos() {
+    TodoDispatcher.dispatch({
+      type: TodoActionTypes.TOGGLE_ALL_TODOS
+    })
   }
 };
 

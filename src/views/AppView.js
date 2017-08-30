@@ -45,6 +45,8 @@ function Main(props) {
         ))}
       </ul>
 
+      <button onClick={() => props.onToggleAllTodo()}>Toggle All Todos</button>
+
       <AddTodo onAddTodo={props.onAddTodo}/>
     </section>
   );
@@ -58,7 +60,7 @@ function Footer(props) {
     <footer id="footer">
       <span id="todo-count">
         <strong>
-          {props.todos.size}
+          {props.todos.filter((todo) => !todo.complete).size}
         </strong>
         {' items left'}
       </span>
